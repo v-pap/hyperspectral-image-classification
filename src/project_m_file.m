@@ -1,5 +1,3 @@
- % This is a supporting MATLAB file for the project
-
 clear
 format compact
 close all
@@ -79,7 +77,7 @@ Combined_array_response = [Train_array_response Test_array_response Operational_
 Combined_array_pos = [Train_array_pos' Test_array_pos' Operational_array_pos'];
 Combined_array_pos = Combined_array_pos';
 
-for i=1:c %Calculate the ì, ó of every phasmatic category (out of the 204) of a class 
+for i=1:c %Calculate the Ã¬, Ã³ of every spectral band (out of the 204) of a class 
     for j=1:l
         [m_hat(i,j), S_hat(i,j)]=Gaussian_ML_estimate(Train_array(j,find(Train_array_response==i)));
     end
