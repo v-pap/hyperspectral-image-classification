@@ -7,6 +7,9 @@ The classification to the 5 categories is done by three different classifiers (s
 2) minimum Euclidean distance classifier
 3) k-nearest neighbor classifier
 
+The program uses some points of the dataset for training and some others for testing. In the case of the KNN classifier, before doing the actual training, the training set is first used to calculate the optimal K value (from 1 to 17). This is done with the use of the cross validation method, by splitting the training dataset to 5 equal parts, but with distinct points, and with the same ratio of categories. Specifically for every K value, 5 knn classifiers are trained, one from each part of the training set while using the remaining 4 for testing. Then by calculating the average for every K, we pick the one which provides the lowest error rate.
+
+
 ## Getting Started
 
 ### Prerequisites
